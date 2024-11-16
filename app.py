@@ -108,6 +108,5 @@ def get_open_meteo_flood_alerts(lat, lon):
         return flood_alerts
     except requests.exceptions.RequestException as e:
         return {'error': 'Failed to fetch flood alerts', 'message': str(e)}
-
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5000)

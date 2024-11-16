@@ -20,7 +20,7 @@ from sklearn.metrics import accuracy_score, recall_score, roc_auc_score, confusi
 def preprocess_data(input_file_path):
     # Read the dataset
     data = pd.read_csv(input_file_path,header=None)
-    
+
 
     # Assign the first row as column headers
     data.columns = data.iloc[0]
@@ -41,7 +41,7 @@ def preprocess_data(input_file_path):
     if 'Subdivision' in data.columns:
         vectorizer = TfidfVectorizer()
         vectorized = vectorizer.fit_transform(data['Subdivision'].astype(str))
-    
+
         # Convert sparse matrix to dense DataFrame and merge
         vectorized_df = pd.DataFrame(vectorized.toarray(), columns=vectorizer.get_feature_names_out())
         data = pd.concat([vectorized_df, data.drop(columns=['Subdivision'])], axis=1)
@@ -77,7 +77,7 @@ def preprocess_data(input_file_path):
     # Display a preview of the processed DataFrame
     print(data.head())
 
-    
+
 
 
 def flood_prediction(prediction_input,prediction_output,start_year):
@@ -125,7 +125,7 @@ def flood_prediction(prediction_input,prediction_output,start_year):
         specific_year_data = data[data['Year'] == year].drop(
             columns=[f'Flood_{i}yr' for i in range(1, 6)] + ['Year', 'Annual']
         )
-    
+
         # Predict annual rainfall for the specific year
         rainfall_specific_year = rainfall_model.predict(specific_year_data)
         predicted_rainfall = rainfall_specific_year[0]
@@ -142,11 +142,11 @@ def flood_prediction(prediction_input,prediction_output,start_year):
             flood_data['Predicted_Rainfall'] = predicted_rainfall
 
             y_flood = data[data['Year'] == year][f'Flood_{i}yr']
-        
+
             # If there's only one sample, don't split and directly use the data
             if len(flood_data) > 1:
                 x_train, x_test, y_train, y_test = train_test_split(flood_data, y_flood, test_size=0.2, random_state=42)
-            
+
                 # Train a Random Forest model for flooding prediction
                 flood_model = RandomForestClassifier(max_depth=5, random_state=1)
                 flood_model.fit(x_train, y_train)
@@ -182,11 +182,11 @@ def flood_prediction(prediction_input,prediction_output,start_year):
 
 if __name__ == '__main__':
 
-    input_file_path = '/Users/raygantaylor/Desktop/BESMART_files/Austin_Rainfall_95.csv'
-    prediction_input = 'processed_data_corrected.csv' 
+    input_file_path = '/Users/valentinagomez/Desktop/flood-guard/DUHackathon/Austin_Rainfall_95.csv'
+    prediction_input = 'processed_data_corrected.csv'
     prediction_output = 'flood_and_rainfall_predictions_2008_2012.csv' # need better naming conventions
     start_year = 2008
-    
+
     print(f"Input file path: {input_file_path}")
     print(f"Prediction input file path: {prediction_input}")
     print(f"Prediction output file path: {prediction_output}")
@@ -197,7 +197,7 @@ if __name__ == '__main__':
 
     '''
     HOW TO INTERPRET TERMINAL OUTPUT/CSV:
-    Only consider the possibility of a flood for the first year. For example, 
+    Only consider the possibility of a flood for the first year. For example,
     to determine whether a flood would occur 1 - 5 years after 2008, only read the first row:
      Year  Predicted_Annual_Rainfall Flood_1yr Flood_2yr Flood_3yr Flood_4yr Flood_5yr
 0  2008                  24.187164        No        No        No        No       Yes
@@ -207,11 +207,11 @@ if __name__ == '__main__':
     consider all values in the Predicted_Annual_Rainfall column. For example:
 
     Year  Predicted_Annual_Rainfall Flood_1yr Flood_2yr Flood_3yr Flood_4yr Flood_5yr
-0  2008                  24.187164       
-1  2009                  31.677143       
-2  2010                  36.456027       
-3  2011                  29.176055      
-4  2012                  32.601944 
+0  2008                  24.187164
+1  2009                  31.677143
+2  2010                  36.456027
+3  2011                  29.176055
+4  2012                  32.601944
 
     We calculated the mean, median, minimum, and maximum rainfall when Flood == 'Yes' and Flood == 'No'
     Based on those results for this dataset, (measurements in mm)

@@ -29,7 +29,6 @@ body {
 .layout_padding-bottom {
   padding-bottom: 90px;
 }
-
 .heading_container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -55,11 +54,11 @@ body {
   background-position:  right;
   background-size: 60% 90%;
   z-index: 0;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
 }
 
 .sub_page .hero_area {
-  padding-top: 100px;
+  padding-top: 0px;
   height: auto;
   background: none;
   background-color: #0f4c75;
@@ -67,7 +66,7 @@ body {
 
 .header_section {
   overflow-x: hidden;
-  background-color: #346e95; /* Set a solid color here */
+   /* Set a solid color here */
   position: relative; /* Ensure proper stacking context */
   z-index: 1;
 }
@@ -85,7 +84,6 @@ body {
   width: 90%;
 
 }
-
 .header_section .user_option {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -379,54 +377,6 @@ a:focus {
   margin: 10px 0;
 }
 
-.about_section {
-  position: relative;
-  padding-top: 75px;
-}
-
-.about_section .row {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.about_section .img-box img {
-  width: 100%;
-}
-
-.about_section .detail-box p {
-  margin-top: 15px;
-}
-
-.about_section .detail-box a {
-  display: inline-block;
-  padding: 7px 30px;
-  background-color: transparent;
-  color: #3554d1;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  border: 1px solid #3554d1;
-  border-radius: 25px;
-  margin-top: 25px;
-}
-
-.about_section .detail-box a:hover {
-  background-color: #3554d1;
-  border-color: transparent;
-  color: #ffffff;
-}
-
-.about_section .square-box {
-  position: absolute;
-  right: 25px;
-  bottom: 0;
-  width: 75px;
-}
-
-.about_section .square-box img {
-  width: 100%;
-}
-
 .sale_section .heading_container {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -445,112 +395,9 @@ a:focus {
       flex-wrap: wrap;
 }
 
-
-
-.price_section .heading_container {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.price_section .price_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  text-align: center;
-}
-
-.price_section .price_container .box {
-  -ms-flex-preferred-size: 32%;
-      flex-basis: 32%;
-  margin: 45px .65%;
-  color: #ffffff;
-  min-width: 300px;
-}
-
-.price_section .price_container .box .detail-box {
-  background-color: #3554d1;
-}
-
-.price_section .price_container .box .detail-box .heading-box {
-  padding: 20px 0;
-  background-color: #0f2480;
-}
-
-.price_section .price_container .box .detail-box .heading-box h4 {
-  font-weight: bold;
-}
-
-.price_section .price_container .box .detail-box .heading-box h6 {
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.price_section .price_container .box .detail-box .text-box {
-  padding: 45px 0;
-}
-
-.price_section .price_container .box .detail-box .text-box h2 {
-  font-weight: bold;
-  position: relative;
-  padding-bottom: 15px;
-  margin-bottom: 20px;
-}
-
-.price_section .price_container .box .detail-box .text-box h2::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 45px;
-  height: 5px;
-  border-radius: 10px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  background-color: #ffffff;
-}
-
-.price_section .price_container .box .detail-box .text-box ul {
-  padding: 0;
-}
-
-.price_section .price_container .box .detail-box .text-box ul li {
-  list-style-type: none;
-  margin: 10px 0;
-}
-
-.price_section .price_container .box .btn-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 45px;
-}
-
-.price_section .price_container .box .btn-box a {
-  padding: 7px 30px;
-  background-color: #0f2480;
-  color: #ffffff;
-  border-radius: 25px;
-}
-
-.price_section .price_container .box:hover .detail-box {
-  background-color: #f9bc16;
-}
-
-.price_section .price_container .box:hover .btn-box a {
-  background-color: #f9bc16;
-}
-
 .deal_section {
   overflow-x: hidden;
+  background-color: #3282b8;
 }
 
 .deal_section .row {
@@ -600,74 +447,6 @@ a:focus {
 }
 
 
-.contact_section {
-  position: relative;
-}
-
-.contact_section .heading_container {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 40px;
-}
-
-.contact_section .container-fluid {
-  background-color: #0f2480;
-  color: #ffffff;
-}
-
-.contact_section .form_container {
-  padding: 45px 0 45px 15px;
-}
-
-.contact_section input {
-  width: 100%;
-  border: none;
-  background-color: #ffffff;
-  outline: none;
-  color: #252525;
-  margin-top: 25px;
-  padding: 12px;
-}
-
-.contact_section input::-webkit-input-placeholder {
-  color: #2a2a2c;
-}
-
-.contact_section input:-ms-input-placeholder {
-  color: #2a2a2c;
-}
-
-.contact_section input::-ms-input-placeholder {
-  color: #2a2a2c;
-}
-
-.contact_section input::placeholder {
-  color: #2a2a2c;
-}
-
-.contact_section input.message-box {
-  padding: 45px 12px;
-}
-
-.contact_section button {
-  padding: 10px 65px;
-  outline: none;
-  border: none;
-  color: #ffffff;
-  background: #f97616;
-  border-radius: 25px;
-  margin: 45px 0 0 auto;
-  text-transform: uppercase;
-}
-
-.contact_section .map_container {
-  height: 100%;
-}
-
-.contact_section .map_container .map-responsive {
-  height: 100%;
-}
 
 .info_section {
   background-color: #0f2480;
@@ -692,63 +471,6 @@ a:focus {
   color: #ffffff;
 }
 
-.info_section .info_contact .img-box {
-  width: 35px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.info_section .info_contact p {
-  margin: 0;
-}
-
-.info_section .info_contact > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 20px 0;
-}
-
-.info_section .info_contact > div img {
-  height: auto;
-  margin-right: 12px;
-}
-
-.info_section .info_form form input {
-  outline: none;
-  width: 100%;
-  padding: 7px 10px;
-}
-
-.info_section .info_form form button {
-  padding: 8px 35px;
-  outline: none;
-  border: none;
-  color: #ffffff;
-  background: #f97616;
-  margin-top: 15px;
-  text-transform: uppercase;
-}
-
-.info_section .info_form .social_box {
-  margin-top: 35px;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.info_section .info_form .social_box a {
-  margin-right: 25px;
-}
-
 /* footer section*/
 .footer_section {
   background-color: #0f2480;
@@ -770,3 +492,54 @@ a:focus {
 
 /* end footer section*/
 /*# sourceMappingURL=style.css.map */
+
+/* find section */
+.find_section {
+  position: relative;
+  display: flex;
+  justify-content: space-between; /* Align content with space between */
+  align-items: center; /* Vertically align items */
+  padding: 50px 0; /* Adjust padding for spacing */
+  background-color: #f9f9f9; /* Light background color */
+}
+
+.find_section .container {
+  max-width: 50%; /* Limit width to 50% of the section */
+  text-align: left; /* Align the text to the left */
+}
+
+.find_section h4 {
+  color: #0f2480;
+  font-weight: bold;
+  font-size: 2rem; /* Adjust font size */
+  margin-bottom: 20px; /* Add space below heading */
+}
+
+.find_section .btn {
+  display: inline-block;
+  padding: 10px 35px;
+  background-color: #0f2480; /* Blue color for the button */
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: all 0.3s ease; /* Smooth transition for hover */
+  text-decoration: none;
+}
+
+.find_section .btn:hover {
+  background-color: #f97616; /* Orange color on hover */
+  color: #fff; /* Keep text color white on hover */
+  text-decoration: none; /* Remove underline on hover */
+}
+
+.find_section .image-box {
+  max-width: 45%; /* Limit the width of the image box */
+  text-align: right; /* Align the image to the right */
+}
+
+.find_section .image-box img {
+  width: 100%; /* Make the image responsive */
+  height: auto;
+  border-radius: 15px; /* Optional: rounded corners for images */
+}

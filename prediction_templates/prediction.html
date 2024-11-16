@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>Flood Guard</title>
+
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+        color: #333;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 50px auto;
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        color: #0f2480;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .form-group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .form-group label {
+        margin-right: 10px;
+        font-size: 1.1rem;
+        color: #555;
+    }
+
+    .form-group input {
+        width: 150px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+
+    button {
+        background-color: #3554d1;
+        color: #ffffff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: #f97616;
+    }
+
+    .results {
+        margin-top: 40px;
+    }
+
+    .prediction-card {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    h3 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        color: #0f2480;
+    }
+
+    p {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .risk-level {
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 4px;
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+    .risk-low {
+        background-color: #4CAF50;
+    }
+
+    .risk-medium {
+        background-color: #ff9800;
+    }
+
+    .risk-high {
+        background-color: #f44336;
+    }
+
+    .flood-predictions {
+        margin-top: 15px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .flood-year {
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        padding: 8px 12px;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .yes {
+        color: #f44336;
+        font-weight: bold;
+    }
+
+    .no {
+        color: #4CAF50;
+        font-weight: bold;
+    }
+    .hero_area {
+      position: relative;
+      background-repeat: no-repeat;
+      background-position:  right;
+      background-size: 60% 90%;
+      z-index: 10;
+      padding-bottom: 100px;
+    }
+
+    .sub_page .hero_area {
+      padding-top: 0px;
+      height: auto;
+      background: none;
+      background-color: #0f4c75;
+    }
+    .navbar {
+  padding: 10px 20px; /* Add padding to the navbar */
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space out the items */
+}
+
+/* Style the logo */
+.navbar-brand img {
+  max-height: 50px; /* Adjust the height as needed */
+  width: auto; /* Maintain aspect ratio */
+}
+
+        </style>
+
+</head>
+
+<body class="sub_page">
+    <div class="hero_area">
+        <!-- Header Section -->
+        <header class="header_section">
+          <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg custom_nav-container">
+              <div class="navbar-collapse">
+                <ul class="navbar-nav">
+                  <!-- Add nav items here -->
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </header>
+      </div>
+
+<body>
+    <div class="container">
+        <h1>Flood Prediction Analysis</h1>
+
+        <div class="form-group">
+            <label for="city">City:</label>
+            <input type="text" id="city" placeholder="Enter city">
+            <label for="startYear">Start Year:</label>
+            <input type="number" id="startYear" min="2008" max="2012" value="2008">
+            <button onclick="getPredictions()">Get Predictions</button>
+        </div>
+
+        <div id="results" class="results"></div>
+    </div>
+
+    <script>
+        function getPredictions() {
+            const startYear = document.getElementById('startYear').value;
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = 'Loading predictions...';
+
+            fetch('/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ start_year: startYear }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                resultsDiv.innerHTML = '';
+                data.forEach(prediction => {
+                    const card = document.createElement('div');
+                    card.className = 'prediction-card';
+
+                    const riskClass = `risk-${prediction.risk_level.toLowerCase()}`;
+
+                    card.innerHTML = `
+                        <h3>Year ${prediction.year}</h3>
+                        <p>Predicted Annual Rainfall: ${prediction.predicted_rainfall.toFixed(2)} mm</p>
+                        <p>Risk Level: <span class="risk-level ${riskClass}">${prediction.risk_level}</span></p>
+                        <div class="flood-predictions">
+                            <div class="flood-year">1 Year: <span class="${prediction.flood_predictions['1_year'].toLowerCase()}">${prediction.flood_predictions['1_year']}</span></div>
+                            <div class="flood-year">2 Years: <span class="${prediction.flood_predictions['2_year'].toLowerCase()}">${prediction.flood_predictions['2_year']}</span></div>
+                            <div class="flood-year">3 Years: <span class="${prediction.flood_predictions['3_year'].toLowerCase()}">${prediction.flood_predictions['3_year']}</span></div>
+                            <div class="flood-year">4 Years: <span class="${prediction.flood_predictions['4_year'].toLowerCase()}">${prediction.flood_predictions['4_year']}</span></div>
+                            <div class="flood-year">5 Years: <span class="${prediction.flood_predictions['5_year'].toLowerCase()}">${prediction.flood_predictions['5_year']}</span></div>
+                        </div>
+                    `;
+
+                    resultsDiv.appendChild(card);
+                });
+            })
+            .catch(error => {
+                resultsDiv.innerHTML = 'Error fetching predictions. Please try again.';
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section ">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="https://html.design/">Dillard University</a>
+      </p>
+    </div>
+  </section>
+  <!-- end  footer section -->
+
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/custom.js"></script>
+  <script src="app.js"></script>
+</body>
+</body>
+
+</html>

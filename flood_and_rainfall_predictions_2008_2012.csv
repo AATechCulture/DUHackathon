@@ -1,0 +1,6 @@
+Year,Predicted_Annual_Rainfall,Flood_1yr,Flood_2yr,Flood_3yr,Flood_4yr,Flood_5yr
+2008,24.187164101888992,No,No,No,No,Yes
+2009,31.677143041125543,No,No,No,Yes,No
+2010,36.456026984127,No,No,Yes,No,Yes
+2011,29.176055362248864,No,Yes,No,Yes,Yes
+2012,32.60194401265401,Yes,No,Yes,Yes,Yes

@@ -14,7 +14,9 @@ This repository contains the full implementation of **Flood Guard**, an applicat
 
 ## Project Description 🤯
 
-## Flood Guard is a web-based tool that offers accurate flood risk predictions and real-time weather updates for specific locations. By allowing users to input a city and zip code, the platform provides essential data, including precipitation levels and a flood risk score. The model also incorporates up to 5 years' worth of historical flood data, helping users better understand potential future risks. This long-term data empowers homebuyers, insurance companies, and businesses to make informed decisions based on comprehensive, historical, and real-time insights.
+Flood Guard is a web-based tool that offers accurate flood risk predictions and real-time weather updates for specific locations. By allowing users to input a city and zip code, the platform provides essential data, including precipitation levels and a flood risk score. The model also incorporates up to 5 years' worth of historical flood data, helping users better understand potential future risks. This long-term data empowers homebuyers, insurance companies, and businesses to make informed decisions based on comprehensive, historical, and real-time insights.
+
+---
 
 ## Project Value 💰
 

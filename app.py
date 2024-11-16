@@ -2,15 +2,17 @@ from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS  # Import Flask-CORS
 import requests
 from geopy.distance import geodesic  # To calculate distance between coordinates
+from dotenv import load_dotenv
+import os
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS
 
 # API Keys and URLs
-API_KEY = "661e2033ec8846dd8ff7aa506ac5ba6c"
+API_KEY = os.getenv('GEOCODING_API_KEY')
 GEOCODING_URL = "https://api.opencagedata.com/geocode/v1/json"
 WEATHER_URL = "https://api.open-meteo.com/v1/forecast"
-OPEN_METEO_FLOOD_URL = "https://api.open-meteo.com/v1/alerts"
+OPEN_METEO_FLOOD_URL = "https://api.open-meteo.com/v1/flood"
 
 @app.route('/')
 def index():

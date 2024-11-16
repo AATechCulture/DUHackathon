@@ -69,9 +69,8 @@ _Add your presentation link here._
 
 ### Project Checklist 🏁
 
-- [ ] Presentation complete and linked
-- [ ] Video pitch recorded and linked
-- [ ] Code merged to main branch
+- [✅] [Presentation complete and linked](https://docs.google.com/presentation/d/1HT9M6dHDdcKcLQ5URnr3g-81Br8rvAm0b92jH1cpPF0/edit?usp=sharing)
+- [✅] Code merged to main branch
 
 ---
 

@@ -14,18 +14,17 @@ This repository contains the full implementation of **Flood Guard**, an applicat
 
 ## Project Description 🤯
 
-Flood Guard is a web-based tool that provides flood risk predictions and real-time weather updates for specific locations. Users can input a city and zip code to retrieve, precipitation levels, and a flood risk score.
-
----
+## Flood Guard is a web-based tool that offers accurate flood risk predictions and real-time weather updates for specific locations. By allowing users to input a city and zip code, the platform provides essential data, including precipitation levels and a flood risk score. The model also incorporates up to 5 years' worth of historical flood data, helping users better understand potential future risks. This long-term data empowers homebuyers, insurance companies, and businesses to make informed decisions based on comprehensive, historical, and real-time insights.
 
 ## Project Value 💰
 
-Flood Guard is aimed at:
+Flood Guard delivers significant value across several industries:
 
-1. **Homebuyers**: Empowering them with location-specific flood risk data to make informed decisions before purchasing properties.
-2. **Insurance Companies**: Offering tools to adjust insurance premiums based on flood risk analysis for specific regions.
+- Homebuyers: By providing up to 5 years of flood risk data, Flood Guard equips homebuyers with detailed insights on flood history and future risk projections for specific locations. This helps individuals make well-informed decisions when purchasing properties, protecting their investment from potential flood damage.
 
-This solution mitigates financial risks, improves safety measures, and enhances disaster preparedness.
+- Insurance Companies: With historical flood data and real-time risk analysis, Flood Guard offers insurance companies a powerful tool to assess flood risks more accurately. This enables insurers to adjust premiums based on more precise, location-specific flood risk analysis. The tool supports dynamic pricing models, ensuring that insurance policies reflect the true risk level of properties, making premium pricing more competitive and fair.
+
+- Real Estate Developers & Investors: For businesses involved in real estate development or investment, Flood Guard provides invaluable flood risk forecasting. It helps in choosing project sites that minimize flood exposure, reducing potential losses and ensuring long-term property value retention.
 
 ---
 

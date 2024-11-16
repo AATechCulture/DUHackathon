@@ -15,15 +15,27 @@
   <title>Flood Guard
   </title>
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
 
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,700&display=swap" rel="stylesheet">
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+<!-- Fonts style -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,700&display=swap" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+
+<!-- Responsive style -->
+<link href="{{ url_for('static', filename='css/responsive.css') }}" rel="stylesheet" />
+
+<!-- Leaflet.js CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+<!-- Leaflet.js JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+
 </head>
 
 <body>
@@ -33,7 +45,7 @@
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container">
           <a class="navbar-brand" href="index.html">
-            <img src="images/logo_flood2.png" alt="" />
+            <img src="{{ url_for('static', filename='images/logo_flood2.png') }}" alt="Logo" class="logo">
           </a>
           <div class="navbar-collapse" id="">
             <ul class="navbar-nav justify-content-between ">
@@ -290,16 +302,6 @@
             <a href="">
               Get A Quote
             </a>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="img-box">
-            <div class="box b1">
-              <img src="images/d-1.jpg" alt="">
-            </div>
-            <div class="box b1">
-              <img src="images/d-2.jpg" alt="">
-            </div>
           </div>
         </div>
       </div>

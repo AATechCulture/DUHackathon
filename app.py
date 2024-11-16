@@ -13,8 +13,21 @@ WEATHER_URL = "https://api.open-meteo.com/v1/forecast"
 OPEN_METEO_FLOOD_URL = "https://api.open-meteo.com/v1/alerts"
 
 @app.route('/')
-def index():
-    return render_template('index.html')
+def home():
+    return render_template('index.html')  # Serve index.html
+
+@app.route('/about')
+def about():
+    return render_template('about.html')  # Serve about.html
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')  # Serve contact.html
+
+@app.route('/house')
+def house():
+    return render_template('house.html')  # Serve house.html
+
 
 @app.route('/get_weather', methods=['POST'])
 def get_weather():

@@ -48,6 +48,22 @@ body {
 }
 
 /*header section*/
+/* Target the logo image */
+.logo {
+  width: 200px;           /* Set the width of the logo */
+  height: auto;           /* Maintain the aspect ratio */
+  display: block;         /* Ensure the logo is a block-level element */
+  margin: 0 auto;         /* Center the logo horizontally */
+  padding-top: 20px;      /* Add space at the top */
+}
+
+/* Optional: Adjust logo size for smaller screens */
+@media (max-width: 768px) {
+  .logo {
+      width: 150px;       /* Reduce logo size on small screens */
+  }
+}
+
 .hero_area {
   background-image: url(../images/house_elevetadjpeg.jpeg);
   position: relative;

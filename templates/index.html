@@ -11,8 +11,27 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            font-family: 'Arial', sans-serif;
+            font-family:  'Arial', sans-serif;
             background-color: #f2f2f2; /* Light gray background */
+        }
+
+        .header {
+
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+        }
+
+        .header img {
+            width: 150px; /* Adjust logo size */
+            height: 150px;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            margin: 0;
         }
 
         .container {
@@ -25,8 +44,9 @@
             color: #333; /* Dark gray text */
         }
 
+
         h1 {
-            color: #0f2480; /* Navy blue */
+            color: #0f4c75; /* Navy blue */
             font-size: 2.5rem;
             text-align: center;
             margin-bottom: 30px;
@@ -125,9 +145,47 @@
             color: #4CAF50; /* Green for "no" */
             font-weight: bold;
         }
+
+    /* Footer Section Styling */
+    .footer_section {
+    background-color: #0f2480; /* Navy blue background */
+    padding: 20px 0; /* Add some padding for spacing */
+}
+
+.footer_section .container {
+    padding: 0; /* Remove padding from container to prevent inner box */
+}
+
+.footer_section p {
+    border-top: 1px solid #ffffff; /* White top border */
+    color: #000; /* White text color */
+    margin: 0;
+    width: 70%; /* Set width */
+    padding: 25px 0 20px 0; /* Padding for spacing */
+    text-align: center; /* Center align text */
+    margin: 0 auto; /* Center the footer */
+}
+
+.footer_section a {
+    color: #000; /* White text for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.footer_section a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+
     </style>
 </head>
 <body>
+
+    <div class="header">
+        <!-- Logo on the left -->
+        <img src="/DUHackathon/home/images/logo_flood2.png" alt="Flood Guard Logo">
+        <!-- Title on the right -->
+        <h1>Flood Guard</h1>
+    </div>
 
     <div class="container">
         <!-- Weather Information -->
@@ -164,6 +222,16 @@
         <!-- Map Container -->
         <div id="map"></div>
     </div>
+
+ <!-- footer section -->
+  <section class="container-fluid footer_section ">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="https://html.design/">Dillard University</a>
+      </p>
+    </div>
+  </section>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>

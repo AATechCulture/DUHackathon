@@ -84,6 +84,7 @@ body {
   width: 90%;
 
 }
+
 .header_section .user_option {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -153,7 +154,8 @@ a:focus {
 }
 
 .navbar-brand img {
-  width: 90px;
+  width: 100px;
+  height: auto;
 }
 
 .custom_nav-container {

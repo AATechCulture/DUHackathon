@@ -49,7 +49,7 @@ body {
 
 /*header section*/
 .hero_area {
-  background-image: url(../images/hero-bg.jpg);
+  background-image: url(../images/house_elevetadjpeg.jpeg);
   position: relative;
   background-repeat: no-repeat;
   background-position: top right;
@@ -583,6 +583,7 @@ a:focus {
   border-radius: 25px;
 }
 
+/*info section*/
 .info_section {
   background-color: #0f2480;
   color: #ffffff;
@@ -593,19 +594,6 @@ a:focus {
   margin-bottom: 25px;
   font-size: 24px;
 }
-
-.info_section .info_links ul {
-  padding: 0;
-}
-
-.info_section .info_links ul li {
-  list-style-type: none;
-}
-
-.info_section .info_links ul li a {
-  color: #ffffff;
-}
-
 
 /* footer section*/
 .footer_section {

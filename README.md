@@ -58,11 +58,11 @@ _Add your presentation link here._
 
 ### Team Checklist ✅
 
-- [ ] Team photo
-- [ ] Team Slack channel
-- [ ] Communication established with mentor
-- [ ] Repo creation from this template
-- [ ] Hangar registration
+- [✅] Team photo
+- [✅] Team Slack channel
+- [✅] Communication established with mentor
+- [✅] Repo creation from this template
+- [✅] Hangar registration
 
 ---
 

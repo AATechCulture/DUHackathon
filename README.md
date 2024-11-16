@@ -1,51 +1,60 @@
+# Flood Guard
+
 ### TL;DR 🚨
 
-This is a repository template containing all the information that needs to accompany your project.
-
-Feel free to use any languages or frameworks, but the following information must be filled out in your project's README before hacking ends.
+This repository contains the full implementation of **Flood Guard**, an application designed to predict flood risk and provide essential weather data for homebuyers and insurance companies.
 
 ---
-
----
-
-# Project Name
 
 ## Challenge Statement(s) Addressed 🎯
 
-**...include the challenge statement(s) the project worked to address**
+**How might we enable homebuyers and insurance companies to assess flood risks for specific locations, ensuring better decision-making and preparedness?**
 
-Examples:
-
-- How might we decrease the United States chances of alien and monster attacks given what we know from popular alien and monster movies?
-- How might we ....
+---
 
 ## Project Description 🤯
 
-**....at least 3 sentences describing what the project does and how it works**
+Flood Guard is a web-based tool that provides flood risk predictions and real-time weather updates for specific locations. Users can input a city and zip code to retrieve, precipitation levels, and a flood risk score.
+
+---
 
 ## Project Value 💰
 
-**....at least 3 sentences describing your target customer and tangible benefits from your solution**
+Flood Guard is aimed at:
+
+1. **Homebuyers**: Empowering them with location-specific flood risk data to make informed decisions before purchasing properties.
+2. **Insurance Companies**: Offering tools to adjust insurance premiums based on flood risk analysis for specific regions.
+
+This solution mitigates financial risks, improves safety measures, and enhances disaster preparedness.
+
+---
 
 ## Tech Overview 💻
 
-**... what tech was used to bring this project to life?**
+**Technologies Used**:
 
-Example:
+- **Backend**: Flask (Python) for API integration and data handling.
+- **Frontend**: HTML, CSS, JavaScript with Bootstrap for a responsive design.
+- **APIs**:
+  - OpenCage Geocoding API
+  - Open-Meteo Weather API
+- **Map Integration**: Leaflet.js for dynamic, interactive maps.
+- **Machine Learning**:
+  - **scikit-learn**: Logistic Regression and Random Forest Classifier and Regressor for flood prediction models.
 
-- FastAPI
-- Hugging Face AI Models
-- Next.js
-- Java
-- ReactJS
+---
 
 ### Link to Video Pitch 📹
 
-**...point us to the short clip that tells us about your solution 😄**
+_Add your video pitch link here._
+
+---
 
 ### Link to Demo Presentation 📽
 
-**...point us to your PPT or Canva slides 😍**
+_Add your presentation link here._
+
+---
 
 ### Team Checklist ✅
 
@@ -55,24 +64,34 @@ Example:
 - [ ] Repo creation from this template
 - [ ] Hangar registration
 
+---
+
 ### Project Checklist 🏁
 
 - [ ] Presentation complete and linked
 - [ ] Video pitch recorded and linked
 - [ ] Code merged to main branch
 
+---
+
 ### School Name 🏫
 
-The ABC School
+Dillard University
+
+---
 
 ### Team Name 🏷
 
-Coding Costars
+Flood Guardians
+
+---
 
 ### ✨ Contributors ✨
 
-**...tell the world who you and your team are 🙂**
+**Our Team:**
 
-- Team member X
-- Team member Y
-- Team member Z
+- Raygan Taylor
+- Yassine Ben Jemaa
+- Markeith Artis
+- Valentina Gomez Aldana
+- Daiton Bourque
